@@ -364,7 +364,7 @@ while true; do
                 echo -e ' - Conecta a uno o varios servidores. \n\n - Te los abre en terminales separadas.' | fmt -w $(tput cols)
                 ;;
             *'Revocar acceso a un servidor'*)
-                echo -e ' - Elimina la clave pública del servidor.\n\n - Elimina archivos locales del cliente.\n\n - Revoca el acceso.' | fmt -w $(tput cols)
+                echo -e ' - Eeeeeeeeeelimina la clave pública del servidor.\n\n - Elimina archivos locales del cliente.\n\n - Revoca el acceso.' | fmt -w $(tput cols)
                 ;;
             *'Salir'*)
                 echo -e ' - Termina el script.\n\n - Regresa a la terminal.' | fmt -w $(tput cols)
