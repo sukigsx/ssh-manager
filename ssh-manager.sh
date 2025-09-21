@@ -75,8 +75,8 @@ done
 }
 
 actualizar_script(){
-archivo_local="porsiaca.sh" # Nombre del archivo local
-ruta_repositorio="https://github.com/sukigsx/pruebas.git" #ruta del repositorio para actualizar y clonar con git clone
+archivo_local="ssh-manager.sh" # Nombre del archivo local
+ruta_repositorio="https://github.com/sukigsx/ssh-manager.git" #ruta del repositorio para actualizar y clonar con git clone
 
 # Obtener la ruta del script
 descarga=$(dirname "$(readlink -f "$0")")
