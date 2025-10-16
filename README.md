@@ -13,5 +13,6 @@
 ## Instalacion
 Clonar el repositorio y ejecutar ssh-manager.sh
 
-Tambien puedes utilizar mi script (ejecutar_scripts)
-lo puedes clonar con git clone https://github.com/sukigsx/ejecutar_scripts.git
+Tambien puedes utilizar mi script (ejecutar_scripts).
+  
+    git clone https://github.com/sukigsx/ejecutar_scripts.git
