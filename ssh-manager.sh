@@ -164,6 +164,7 @@ function run_in_terminal() {
             ;;
         "bash")
             bash -e "bash -c \"$command; exec bash\"" &
+            ;;
         *)
             echo "Error: No se encontró un emulador de terminal compatible."
             return 1
