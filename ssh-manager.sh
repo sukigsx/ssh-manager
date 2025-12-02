@@ -134,8 +134,6 @@ function find_terminal() {
         echo "xterm"
     elif command -v terminator &> /dev/null; then
         echo "terminator"
-    elif command -v bash &> /dev/null; then
-        echo "bash"
     else
         echo "none"
     fi
@@ -163,9 +161,6 @@ function run_in_terminal() {
             ;;
         "terminator")
             terminator -e "bash -c \"$command; exec bash\"" &
-            ;;
-        "bash")
-            bash $command
             ;;
         *)
             echo "Error: No se encontró un emulador de terminal compatible."
