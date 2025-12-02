@@ -134,6 +134,8 @@ function find_terminal() {
         echo "xterm"
     elif command -v terminator &> /dev/null; then
         echo "terminator"
+    elif command -v bash &> /dev/null; then
+        echo "bash"
     else
         echo "none"
     fi
