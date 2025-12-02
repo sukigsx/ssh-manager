@@ -163,9 +163,11 @@ function run_in_terminal() {
             terminator -e "bash -c \"$command; exec bash\"" &
             ;;
         *)
-            echo "Error: No se encontró un emulador de terminal compatible."
-            return 1
+            bash -c "$command"
             ;;
+            #echo "Error: No se encontró un emulador de terminal compatible."
+            #return 1
+            #;;
     esac
 }
 
