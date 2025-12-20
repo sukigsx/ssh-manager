@@ -238,7 +238,7 @@ connect_client() {
             if nc -z -w3 "$HOST" 22; then
                 echo -e "${verde}Conectando a ${borra_colores}'$DISPLAY_NAME' ($USERNAME@$HOST)${verde} en nueva ventana terminal.${borra_colores}"; #sleep 2
 
-                run_in_terminal "$DISPLAY_NAME ($USERNAME@$HOST)" "ssh -i \"$SSH_DIR/$CLIENT_DIR_UNIQUE/id_rsa\" \"$USERNAME@$HOST\"" > /dev/null 2>&1
+                run_in_terminal "$DISPLAY_NAME ($USERNAME@$HOST)" "ssh -X -i \"$SSH_DIR/$CLIENT_DIR_UNIQUE/id_rsa\" \"$USERNAME@$HOST\"" > /dev/null 2>&1
             else
                 DISPLAY_NAME=$(echo "$CLIENT" | sed -E 's/ (.*)//')
                 echo -e "${rojo}No se pudo conectar a${borra_colores} $DISPLAY_NAME${rojo}. Saltando conexion.${borra_colores}"
