@@ -339,6 +339,17 @@ else
     var_actualizado="Imposible comprobar sin conexion a internet"
 fi
 
+# --- NUEVO: Atajo por línea de comandos ---
+if [ "$1" == "-c" ] || [ "$1" == "connect" ]; then
+    if [ "$TERMINAL" == "none" ]; then
+        echo -e "${rojo}No se encontró un emulador de terminal compatible.${borra_colores}"
+        exit 1
+    else
+        connect_client
+        exit 0
+    fi
+fi
+# ------------------------------------------
 
 # Bucle principal del menú con fzf y preview
 while true; do
@@ -361,7 +372,7 @@ while true; do
                 echo -e ' - Genera un par de claves.\n\n - Configura el acceso SSH para un nuevo servidor.' | fmt -w $(tput cols)
                 ;;
             *'Conectarse a un servidor existente'*)
-                echo -e ' - Conecta a uno o varios servidores. \n\n - Te los abre en terminales separadas.' | fmt -w $(tput cols)
+                echo -e ' - Conecta a uno o varios servidores. \n\n - Te los abre en terminales separadas. \n\ - Con ssh-manager.sh -c Abre directamente tus conexiones' | fmt -w $(tput cols)
                 ;;
             *'Revocar acceso a un servidor'*)
                 echo -e ' - Elimina la clave pública del servidor.\n\n - Elimina archivos locales del cliente.\n\n - Revoca el acceso.' | fmt -w $(tput cols)
