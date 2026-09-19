@@ -372,7 +372,7 @@ while true; do
                 echo -e ' - Genera un par de claves.\n\n - Configura el acceso SSH para un nuevo servidor.' | fmt -w $(tput cols)
                 ;;
             *'Conectarse a un servidor existente'*)
-                echo -e ' - Conecta a uno o varios servidores. \n\n - Te los abre en terminales separadas. \n\n - Con ssh-manager.sh -c Abre directamente tus conexiones \n   puedes ponerlo en un alias. \n   ej. alias sshc=/ruta/completa/a/tu/ssh-manager.sh -c' | fmt -w $(tput cols)
+                echo -e ' - Conecta a uno o varios servidores. \n\n - Te los abre en terminales separadas. \n\n - Con ssh-manager.sh -c Abre directamente tus conexiones \n   puedes ponerlo en un alias. \n  ej. alias sshc=/ruta/completa/a/tu/ssh-manager.sh -c' | fmt -w $(tput cols)
                 ;;
             *'Revocar acceso a un servidor'*)
                 echo -e ' - Elimina la clave pública del servidor.\n\n - Elimina archivos locales del cliente.\n\n - Revoca el acceso.' | fmt -w $(tput cols)
