@@ -325,6 +325,19 @@ revoke_access() {
 
 #compruba la actualizacion y el ssoftware necesario
 clear
+
+# --- NUEVO: Atajo por línea de comandos ---
+if [ "$1" == "-c" ] || [ "$1" == "connect" ]; then
+    if [ "$TERMINAL" == "none" ]; then
+        echo -e "${rojo}No se encontró un emulador de terminal compatible.${borra_colores}"
+        exit 1
+    else
+        connect_client
+        exit 0
+    fi
+fi
+# ------------------------------------------
+
 conexion
 
 if [ $var_conexion = "si" ]
@@ -340,15 +353,15 @@ else
 fi
 
 # --- NUEVO: Atajo por línea de comandos ---
-if [ "$1" == "-c" ] || [ "$1" == "connect" ]; then
-    if [ "$TERMINAL" == "none" ]; then
-        echo -e "${rojo}No se encontró un emulador de terminal compatible.${borra_colores}"
-        exit 1
-    else
-        connect_client
-        exit 0
-    fi
-fi
+#if [ "$1" == "-c" ] || [ "$1" == "connect" ]; then
+#    if [ "$TERMINAL" == "none" ]; then
+#        echo -e "${rojo}No se encontró un emulador de terminal compatible.${borra_colores}"
+#        exit 1
+#    else
+#        connect_client
+#        exit 0
+#    fi
+#fi
 # ------------------------------------------
 
 # Bucle principal del menú con fzf y preview
