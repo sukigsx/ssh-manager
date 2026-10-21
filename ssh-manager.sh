@@ -19,7 +19,7 @@ ruta_ejecucion=$(dirname "$(readlink -f "$0")") #es la ruta de ejecucion del scr
 ruta_escritorio=$(xdg-user-dir DESKTOP) #es la ruta de tu escritorio sin la / al final
 
 # VARIABLES PARA LA ACTUALIZAION CON GITHUB
-NombreScriptActualizar="ssh.manager.sh" #contiene el nombre del script para poder actualizar desde github
+NombreScriptActualizar="ssh-manager.sh" #contiene el nombre del script para poder actualizar desde github
 DireccionGithub="https://github.com/sukigsx/ssh-manager" #contiene la direccion de github para actualizar el script
 nombre_carpeta_repositorio="ssh-manager" #poner el nombre de la carpeta cuando se clona el repo para poder eliminarla
 
